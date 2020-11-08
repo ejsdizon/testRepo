@@ -14,7 +14,7 @@ public class SampleRestController {
     private int count = 0;
 
     @GetMapping("/message")
-    public SampleMessage message(@RequestParam(value = "special", defaultValue = "default") String message) {
+    public SampleMessage message(@RequestParam(value = "word", defaultValue = "new default val") String message) {
         return new SampleMessage(count++, String.format(affix, message));
     }
 }
